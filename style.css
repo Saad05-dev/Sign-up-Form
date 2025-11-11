@@ -4,9 +4,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face
+{
+    font-family: 'Bold-Norse';
+    src: url(Norse-Bold.otf);
+}
 html
 {
     scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body
 {
@@ -16,22 +22,102 @@ body
     justify-content: center;
     background-color: black;
 }
+p
+{
+    font-size: 20px;
+    font-weight: 500;
+}
 .left-side
 {
     background-color: white;
-    width: 25%;
+    width: 521px;
     height: 100%;
     position: relative;
+    overflow: hidden;
 }
 .left-side #nature
 {
-    width: 100%;
+    width: 130%;
     height: 100%;
-   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.odin-text
+{
+    font-family: 'Bold-Norse',sans-serif;
 }
 .right-side
 {
     background-color: rgb(249,250,251);
-    width: 47%;
+    width: 880px;
     height: 100%;
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 50px;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+.text
+{
+    margin-left: 50px;
+    margin-right: 130px;
+    transform: translateY(50px);
+}
+.text p
+{
+    font-size: 22px;
+    font-weight: bold;
+}
+.text p span
+{
+    font-style: italic;
+}
+.third-text
+{
+    transform: translateY(50px);
+}
+.form
+{
+    background-color: white;
+    height: 300px;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+.form p
+{
+    font-weight: bold;
+}
+form
+{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 50px;
+    margin-right: 130px;
+}
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+input
+{
+    height: 40px;
+    width: 70%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
 }
